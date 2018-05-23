@@ -2,6 +2,7 @@ package com.example.demo.Service.impl;
 
 import com.example.demo.Bean.Account;
 import com.example.demo.Dao.IAccountDAO;
+import com.example.demo.Dao.impl.AccountDaoImpl;
 import com.example.demo.Service.IAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ public class AccountService implements IAccountService {
     //若只有一个类实现某接口，可直接注解接口，自动匹配实现类
     @Autowired
     IAccountDAO accountDAO;
+    //AccountDaoImpl accountDao;
 
     @Override
     public int add(Account account) {
